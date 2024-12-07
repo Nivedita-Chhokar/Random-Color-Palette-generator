@@ -28,6 +28,7 @@ h1{
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: auto;
     letter-spacing: 2px;
+    filter: drop-shadow(0 0 30px #0358e0);
 }
 
 /* h1::before{

@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #333;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+@font-face {
+    font-family: 'Silkscreen';
+    src: url('fonts/Silkscreen-Regular.ttf') format('truetype');
+}
+
+h1{
+    color: #e7e9ed;
+    font-family: 'Silkscreen';
+    font-size: 32px; 
+    text-transform: uppercase;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: auto;
+    letter-spacing: 2px;
+}
+
+/* h1::before{
+    content: "Random Color Palette Generator";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: #e7dfdf;
+    border-right: 8px solid #333;
+    transition: 1s ease-in-out;
+}
+
+h1:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 30px #1c01e5)
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.palette {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.color-box:hover {
+    transform: scale(1.1);
+}
+
+.color-box::after {
+    content: "Click to Copy!";
+    font-size: 0.7rem;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.color-box:hover::after {
+    opacity: 1;
+}
+
+
+.generate-btn {
+    padding: 12px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.generate-btn:hover {
+    background-color: #005fa3;
+}
+
+p {
+    display: inline-block;
+    position: relative;
+    /* font-family: "Silkscreen"; */
+    color: #8f8888;
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typewriter 4s steps(50) forwards; 
+    border-right: 2px solid #8f8888;
+    font-size: 1rem;
+    color: #787575;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0; 
+    }
+    to {
+        width: 100%; 
+    }
+}
